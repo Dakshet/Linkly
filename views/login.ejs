@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+</head>
+
+<body>
+    <div class="allContent">
+        <div class="navbar">
+            <a href="/">
+                <div class="navbarHeading">
+                    <h2>Linkly</h2>
+                </div>
+            </a>
+        </div>
+        <div class="loginPageDiv">
+            <div class="loginPageDivHeading">
+                <h3>Login</h3>
+            </div>
+            <form action="/user/signin" method="post">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+            <p>Not a Member? <a href="/signup">Sign up</a></p>
+        </div>
+
+
+        <div id="alertBox">
+        </div>
+
+        <% if (locals.Error) { %>
+
+            <script>
+                let toastBox = document.getElementById("alertBox");
+                let toast = document.createElement("div");
+                toast.classList.add("toast");
+                toast.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' + "<%= locals.Error %>";
+                toastBox.appendChild(toast);
+
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000)
+
+            </script>
+
+            <% } %>
+
+    </div>
+
+</body>
+
+<script>
+    function showToast(msg, type) {
+        let toastBox = document.getElementById("alertBox");
+        let toast = document.createElement("div");
+        toast.classList.add("toast");
+        let smsg;
+
+        if (type === "Success") {
+            toast.innerHTML = '<i class="fa-solid fa-circle-check"></i>' + msg;
+        }
+        else if (type === "Invalid") {
+            toast.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>' + msg;
+            toast.classList.add("invalid")
+        }
+        else if (type === "Error") {
+            toast.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' + msg;
+            toast.classList.add("error")
+        }
+        toastBox.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 1000)
+    }
+</script>
+
+</html>

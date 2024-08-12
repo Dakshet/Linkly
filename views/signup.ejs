@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+</head>
+
+<body>
+    <div class="allContent">
+        <div class="navbar">
+            <a href="/">
+                <div class="navbarHeading">
+                    <h2>Linkly</h2>
+                </div>
+            </a>
+        </div>
+        <div class="loginPageDiv">
+            <div class="loginPageDivHeading">
+                <h3>Sign up</h3>
+            </div>
+            <form action="/user/signup" method="post" enctype="multipart/form-data">
+                <input type="file" name="profileImage" required>
+                <input type="text" name="name" placeholder="Full Name" required minlength="3">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required minlength="4">
+                <button type="submit">Sign up</button>
+            </form>
+            <p>I'm already a member? <a href="/login">Sign in</a></p>
+        </div>
+
+        <div id="alertBox">
+        </div>
+
+        <% if (locals.Error) { %>
+
+            <script>
+                let toastBox = document.getElementById("alertBox");
+                let toast = document.createElement("div");
+                toast.classList.add("toast");
+                toast.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' + "<%= locals.Error %>";
+                toastBox.appendChild(toast);
+
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000)
+
+            </script>
+
+            <% } %>
+
+
+    </div>
+
+</body>
+<!-- <script src="./alertBox.js"></script> -->
+<!-- <script src="../public/js/alertBox.js"></script> -->
+<script>
+    function showToast(msg, type) {
+        let toastBox = document.getElementById("alertBox");
+        let toast = document.createElement("div");
+        toast.classList.add("toast");
+        let smsg;
+
+        if (type === "Success") {
+            toast.innerHTML = '<i class="fa-solid fa-circle-check"></i>' + msg;
+        }
+        else if (type === "Invalid") {
+            toast.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>' + msg;
+            toast.classList.add("invalid")
+        }
+        else if (type === "Error") {
+            toast.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' + msg;
+            toast.classList.add("error")
+        }
+        toastBox.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 3000)
+    }
+</script>
+
+</html>

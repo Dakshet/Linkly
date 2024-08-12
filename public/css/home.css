@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0B101B;
+    /* background-color: white; */
+    color: black;
+    min-height: 100%;
+    width: 100%;
+}
+
+.allContent {
+    background-color: #0B101B;
+    color: white;
+    padding-bottom: 100px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 2% 2% 5%;
+}
+
+.navbarHeading {
+    color: transparent;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbarHeading h2 {
+    background: linear-gradient(90deg, #EB568E, #144EE3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 35px;
+}
+
+.navbarButtons {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarButtons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.navbarButtons a {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 15px;
+    background-color: #181E29;
+    border: 1px solid #a1a1a1;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbarButtons a i {
+    padding-left: 10px;
+}
+
+
+
+.inputLinksBox {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.inputLinkBoxInner {
+    margin: 10px auto;
+    display: block;
+    max-width: 750px;
+    text-align: center;
+}
+
+.colorfullHeading {
+    color: transparent;
+}
+
+.colorfullHeading h1 {
+    font-size: 45px;
+    background: linear-gradient(90deg, #144EE3, #EB568E, #144EE3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    word-spacing: 5px;
+}
+
+.inputLinkBoxInner p {
+    max-width: 600px;
+    margin: 10px auto 30px;
+    color: grey;
+    font-size: 14px;
+}
+
+.inputBox {
+    border: 4px solid #1b212e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: #181E29;
+    width: 600px;
+    margin: auto;
+}
+
+.inputBox input {
+    flex: 1;
+    width: 60%;
+    padding: 12px 25px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: transparent;
+    color: grey;
+    border-radius: 30px;
+}
+
+.inputBox button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #144EE3;
+    box-shadow: 5px 5px 20px rgba(56, 53, 238, 0.5);
+    padding: 11px 30px;
+    border-radius: 30px;
+    color: white;
+    margin-right: 5px;
+}
+
+.allHistoryOfURL {
+    position: relative;
+    padding-top: 110px;
+    background-color: white;
+}
+
+.custom-shape-divider-top-1723112757 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1723112757 svg {
+    position: relative;
+    display: block;
+    width: calc(145% + 1.3px);
+    height: 116px;
+}
+
+.custom-shape-divider-top-1723112757 .shape-fill {
+    fill: #0B101B;
+}
+
+.allHistoryBackground {
+    background-color: white;
+    padding: 10px 0px 50px;
+}
+
+.allHistoryTable {
+    background-color: #0B101B;
+    padding: 2% 5% 2%;
+    max-width: 970px;
+    margin: auto;
+    border-radius: 30px;
+    max-height: 730px;
+    color: white;
+}
+
+.allHistoryTableHeading {
+    color: transparent;
+}
+
+.allHistoryTableHeading h3 {
+    font-size: 35px;
+    background: linear-gradient(0deg, #EB568E, #144EE3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
+
+.allHistoryTableHeadingContent {
+    margin-top: 30px;
+    overflow-y: scroll;
+    max-height: 593px;
+    display: block;
+}
+
+.allHistoryTableHeadingContent thead tr th {
+    background-color: #181E29;
+    padding: 9px 43px;
+}
+
+.allHistoryTableHeadingContent tbody {
+    background-color: transparent;
+    text-align: center;
+}
+
+.allHistoryTableHeadingContent tbody tr td {
+    padding: 5px 20px;
+}
+
+.allHistoryTableHeadingContent tbody tr td img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: auto;
+}
+
+.allHistoryTableHeadingContent tbody tr td a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.allHistoryTableHeadingContent tbody tr td a {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(186, 92, 186);
+}
+
+.allHistoryTableHeadingContent tbody tr td a:hover {
+    text-decoration: underline;
+}
+
+.loginPageDiv {
+    padding: 20px 30px;
+    display: block;
+    width: 400px;
+    margin: 7px auto 10px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 5px 5px 20px rgba(141, 141, 187, 0.5);
+}
+
+.loginPageDivHeading {
+    color: transparent;
+}
+
+.loginPageDivHeading h3 {
+    font-size: 28px;
+    padding-bottom: 15px;
+    margin-left: -30px;
+    margin-right: -30px;
+    border-bottom: 2px solid #ccc;
+    background: linear-gradient(0deg, #EB568E, #144EE3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.loginPageDiv form input {
+    display: block;
+    width: 100%;
+    margin: 30px 0px 20px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #ccc;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+.loginPageDiv form input::placeholder {
+    color: black;
+}
+
+.loginPageDiv form button {
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    margin: 20px 0px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #EB568E, #144EE3);
+    color: white;
+}
+
+.loginPageDiv p {
+    font-size: 14px;
+}
+
+.loginPageDiv p a {
+    text-decoration: none;
+}
+
+.allHistoryTable h5 {
+    font-size: 25px;
+    padding: 180px 0px 200px 285px;
+    margin: auto;
+}
+
+#alertBox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.toast {
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    color: black;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.toast i {
+    margin: 0 20px;
+    font-size: 35px;
+    color: red;
+    /* color: green; */
+}
+
+/* .toast.error i {} */
+
+.toast.invalid i {
+    color: orange;
+}
+
+.toast::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    animation: anim 3s linear forwards;
+}
+
+@keyframes anim {
+    100% {
+        width: 0;
+    }
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+footer p {
+    font-size: 14px;
+    /* word-spacing: 2px; */
+}
+
+footer p span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+/* ------------------- MEDIA QUERIES */
+
+
+@media (max-width:1000px) {
+
+    .colorfullHeading h1 {
+        font-size: 4.5vw;
+    }
+
+    .inputLinkBoxInner p {
+        max-width: 70vw;
+        font-size: 1.8vw;
+    }
+
+    .inputBox {
+        width: 80vw;
+    }
+
+    .inputBox button {
+        padding: 11px 3vw;
+    }
+
+    .allHistoryTable {
+        padding: 2% 5% 2%;
+        max-width: 97vw;
+    }
+
+    .allHistoryTable h5 {
+        font-size: 25px;
+        padding: 100px 0px 50px 25vw;
+    }
+}
+
+
+@media (max-width:600px) {
+    .allContent {
+        /* background-cols */
+        padding-bottom: 80px;
+    }
+
+    .navbarHeading h2 {
+        font-size: 6.6vw;
+    }
+
+    .loginPageDiv {
+        padding: 20px 20px;
+        width: 340px;
+        margin: 40px auto 10px;
+    }
+
+    .loginPageDivHeading h3 {
+        font-size: 5vw;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+
+    .loginPageDiv form input {
+        font-size: 13px;
+        padding-left: 8px;
+    }
+
+    .loginPageDiv form button {
+        width: 60%;
+        font-size: 3.2vw;
+    }
+
+    .loginPageDiv p {
+        font-size: 2.5vw;
+    }
+
+    .navbarButtons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbarButtons a {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+
+    .colorfullHeading h1 {
+        font-size: 4.8vw;
+    }
+
+    .inputLinkBoxInner p {
+        max-width: 70vw;
+        font-size: 2.3vw;
+    }
+
+    .inputBox input {
+        padding: 12px 10px 12px 15px;
+        font-size: 13px;
+    }
+
+    .inputBox button {
+        padding: 11px 2.5vw;
+        font-size: 12px;
+    }
+
+    .custom-shape-divider-top-1723112757 svg {
+        position: relative;
+        display: block;
+        width: calc(240% +0.8px);
+        height: 116px;
+    }
+
+    .allHistoryTableHeading h3 {
+        font-size: 6vw;
+    }
+
+    .allHistoryTableHeadingContent {
+        margin-top: 4vw;
+    }
+
+    .allHistoryTableHeadingContent thead tr th {
+        padding: 13px 5vw;
+        font-size: 2.6vw;
+    }
+
+    .allHistoryTableHeadingContent tbody tr td {
+        padding: 5px 3vw;
+        font-size: 2.5vw;
+    }
+
+
+    footer {
+        height: 40px;
+    }
+
+
+    footer p {
+        font-size: 2.5vw;
+    }
+
+    .allHistoryTable h5 {
+        font-size: 25px;
+        padding: 50px 0px 50px 20vw;
+        font-size: 5vw;
+    }
+}

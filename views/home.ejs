@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include("./partials/head") %>
+
+</head>
+
+<body>
+    <div class="allContent">
+        <div class="navbar">
+            <a href="/">
+                <div class="navbarHeading">
+                    <h2>Linkly</h2>
+                </div>
+            </a>
+            <div class="navbarButtons">
+                <% if (locals.imageUrl) { %>
+                    <img src=<%=locals.imageUrl %> alt="">
+                    <% } %>
+                        <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="inputLinksBox">
+            <div class="inputLinkBoxInner">
+                <div class="colorfullHeading">
+                    <h1>Shorten Your Looooong Links :&#41;</h1>
+                </div>
+                <p>Linkly is an efficient and easy-to-use URL shortening service that streamlines your
+                    online experience.</p>
+                <form action="/url/generateshorturl" method="POST">
+                    <div class="inputBox">
+                        <input type="url" name="url" placeholder="Enter the link here" required>
+                        <button type="submit">Shortnen Now!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="allHistoryOfURL">
+        <div class="custom-shape-divider-top-1723112757">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="allHistoryBackground">
+        <div class="allHistoryTable">
+            <div class="allHistoryTableHeading">
+                <h3>History (<%= locals.urls.length %>)</h3>
+            </div>
+
+            <% if (locals.urls.length !==0) { %>
+
+                <!-- <div class="allHistoryTableContent"> -->
+
+                <table class="allHistoryTableHeadingContent">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>ShortID</th>
+                            <th>Original Link</th>
+                            <th>Clicks</th>
+                            <th>QR Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% urls.forEach((url, index)=> { %>
+                            <tr>
+                                <td>
+                                    <%= locals.urls.length-index %>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="/url/<%= url.shortId %>">
+                                        <%= url.shortId %>
+                                    </a>
+
+                                </td>
+                                <td>
+                                    <%= url.redirectURL %>
+                                </td>
+                                <td>
+                                    <%= url.visitHistory.length %>
+                                </td>
+                                <td>
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= BASE_URL%>/url/<%=url.shortId %> "
+                                        alt="">
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+                <!-- </div> -->
+                <% } else { %>
+                    <h5>No Data to Display!</h5>
+                    <% } %>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy;2024 <span>Linkly.com</span></p>
+    </footer>
+</body>
+
+</html>
