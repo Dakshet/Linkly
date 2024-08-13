@@ -14,18 +14,20 @@
                 </div>
             </a>
         </div>
-        <div class="loginPageDiv">
-            <div class="loginPageDivHeading">
-                <h3>Sign up</h3>
+        <div class="loginPage">
+            <div class="loginPageDiv">
+                <div class="loginPageDivHeading">
+                    <h3>Sign up</h3>
+                </div>
+                <form action="/user/signup" method="post" enctype="multipart/form-data">
+                    <input type="file" name="profileImage" required>
+                    <input type="text" name="name" placeholder="Full Name" required minlength="3">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required minlength="4">
+                    <button type="submit">Sign up</button>
+                </form>
+                <p>I'm already a member? <a href="/login">Sign in</a></p>
             </div>
-            <form action="/user/signup" method="post" enctype="multipart/form-data">
-                <input type="file" name="profileImage" required>
-                <input type="text" name="name" placeholder="Full Name" required minlength="3">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required minlength="4">
-                <button type="submit">Sign up</button>
-            </form>
-            <p>I'm already a member? <a href="/login">Sign in</a></p>
         </div>
 
         <div id="alertBox">

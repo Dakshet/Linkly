@@ -14,16 +14,18 @@
                 </div>
             </a>
         </div>
-        <div class="loginPageDiv">
-            <div class="loginPageDivHeading">
-                <h3>Login</h3>
+        <div class="loginPage">
+            <div class="loginPageDiv">
+                <div class="loginPageDivHeading">
+                    <h3>Login</h3>
+                </div>
+                <form action="/user/signin" method="post">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit">Login</button>
+                </form>
+                <p>Not a Member? <a href="/signup">Sign up</a></p>
             </div>
-            <form action="/user/signin" method="post">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit">Login</button>
-            </form>
-            <p>Not a Member? <a href="/signup">Sign up</a></p>
         </div>
 
 
