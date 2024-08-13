@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const JWT_SECURE = process.env.JWT_SECURE;
-console.log(JWT_SECURE);
+// console.log(JWT_SECURE);
 
 const createTokenForUser = (user) => {
     const payload = {
