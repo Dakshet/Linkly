@@ -431,6 +431,17 @@ footer p span {
         font-size: 25px;
         padding: 100px 0px 50px 25vw;
     }
+
+
+    #alertBox {
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+    }
+
+    .toast {
+        width: 300px;
+    }
 }
 
 
@@ -529,6 +540,25 @@ footer p span {
         font-size: 2.5vw;
     }
 
+    #alertBox {
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+    }
+
+    .toast {
+        width: 150px;
+        font-size: 2.5vw;
+        height: 50px;
+    }
+
+    .toast i {
+        margin: 0 5px;
+        font-size: 20px;
+        color: red;
+        /* color: green; */
+    }
+
 
     footer {
         height: 40px;
@@ -540,8 +570,8 @@ footer p span {
     }
 
     .allHistoryTable h5 {
-        font-size: 25px;
         padding: 50px 0px 50px 20vw;
         font-size: 5vw;
     }
+
 }
