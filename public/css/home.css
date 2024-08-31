@@ -229,6 +229,44 @@ a {
     margin-right: 5px;
 }
 
+/* ---------------------------- Copy text */
+.copyText {
+    border: 4px solid #1b212e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: #181E29;
+    width: 500px;
+    margin: 30px auto 0px;
+}
+
+.copyText input {
+    padding: 10px 0px 10px 18px;
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.copyText input::placeholder {
+    font-weight: 600;
+    color: white;
+}
+
+.copyText i {
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.copyText i:hover {
+    background-color: #a1a1a1;
+}
+
+
 .allHistoryOfURL {
     position: relative;
     padding-top: 110px;
@@ -601,6 +639,11 @@ footer p span {
         font-size: 12px;
     }
 
+
+    .copyText {
+        width: 80vw;
+    }
+
     .custom-shape-divider-top-1723112757 svg {
         position: relative;
         display: block;
@@ -642,7 +685,6 @@ footer p span {
         margin: 0 5px;
         font-size: 20px;
         color: red;
-        /* color: green; */
     }
 
 

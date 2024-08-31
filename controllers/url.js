@@ -35,11 +35,19 @@ async function handleGenerateShortURL(req, res) {
 
             //Final
             success = true;
-            return res.redirect("/")
+            // return res.redirect("/")
             // return res.render("home", {
             //     BASE_URL: process.env.BASE_URL,
             //     imageUrl: req.user.profileImageURL
             // });
+            const allUrls = await URL.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
+            return res.render("home", {
+                urls: allUrls,
+                BASE_URL: process.env.BASE_URL,
+                user: req.user,
+                image: `.${req.user.profileImageURL}`,
+                shortId: shortID,
+            });
 
 
         }

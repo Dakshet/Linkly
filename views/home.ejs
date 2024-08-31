@@ -4,7 +4,7 @@
 <head>
 
     <%- include("./partials/head") %>
-
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -17,14 +17,14 @@
             </a>
             <% if (locals.user) { %>
                 <div class="navbarButtons">
-                    <img src=<%=user.profileImageURL %> onclick="openUserMenu()" alt="">
+                    <img src=<%=locals.image %> onclick="openUserMenu()" alt="">
                     <!-- <a href="/logout">Logout</a> -->
 
                 </div>
                 <div class="profile-menu-wrap" id="profileMenu">
                     <div class="profile-menu">
                         <div class="user-info">
-                            <img src=<%=user.profileImageURL %> alt="">
+                            <img src=<%=locals.image %> alt="">
                             <div>
                                 <h3>
                                     <%=user.name %>
@@ -40,7 +40,7 @@
                 </div>
                 <% } %>
         </div>
-        <div class=" inputLinksBox">
+        <div class="inputLinksBox">
             <div class="inputLinkBoxInner">
                 <div class="colorfullHeading">
                     <h1>Shorten Your Looooong Links :&#41;</h1>
@@ -53,6 +53,15 @@
                         <button type="submit">Shortnen Now!</button>
                     </div>
                 </form>
+
+                <% if (locals.shortId) { %>
+                    <div class="copyText">
+                        <!-- <input type="text" class="inputField" placeholder=`${http://localhost:5000/url/H78qA3xLTdd}` readonly> -->
+                        <input type="text" class="inputField" placeholder="<%= BASE_URL%>/url/<%=locals.shortId %>"
+                            readonly>
+                        <i class="ri-file-copy-line"></i>
+                    </div>
+                    <% } %>
             </div>
         </div>
     </div>
@@ -125,6 +134,7 @@
                 <p>Copyright &copy;2024 <span>Linkly.com</span></p>
             </footer>
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

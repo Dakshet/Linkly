@@ -20,3 +20,28 @@ gsap.from(".inputLinksBox", {
     duration: 1,
     stagger: 0.4
 })
+
+
+document.querySelectorAll(".copyText").forEach((element) => {
+    const inputText = element.querySelector(".inputField");
+    const copyBtn = element.querySelector("i");
+
+    inputText.addEventListener("focus", () => {
+        inputText.select();
+    })
+
+    copyBtn.addEventListener("click", () => {
+        const text = inputText.placeholder;
+
+        inputText.select();
+        navigator.clipboard.writeText(text);
+
+        inputText.placeholder = "Copied!"
+
+        setTimeout(() => {
+            inputText.placeholder = text;
+        }, [1000])
+    })
+
+
+})

@@ -13,6 +13,7 @@ async function getHomePage(req, res) {
                 urls: allUrls,
                 BASE_URL: process.env.BASE_URL,
                 user: req.user,
+                image: req.user.profileImageURL,
             });
         }
         else {
