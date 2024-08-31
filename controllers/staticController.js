@@ -12,7 +12,7 @@ async function getHomePage(req, res) {
             return res.render("home", {
                 urls: allUrls,
                 BASE_URL: process.env.BASE_URL,
-                imageUrl: req.user.profileImageURL
+                user: req.user,
             });
         }
         else {
