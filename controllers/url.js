@@ -6,38 +6,45 @@ let success = false;
 async function handleGenerateShortURL(req, res) {
     try {
 
-        //Destructure the request
-        const { url } = req.body;
+        if (req.user) {
+            //Destructure the request
+            const { url } = req.body;
 
 
-        //Validate the fields
-        const errors = validationResult(req);
+            //Validate the fields
+            const errors = validationResult(req);
 
-        if (!errors.isEmpty()) {
-            success = false;
-            return res.status(400).json({ success, Error: errors.array()[0].msg })
+            if (!errors.isEmpty()) {
+                success = false;
+                return res.status(400).json({ success, Error: errors.array()[0].msg })
+            }
+
+
+            //Generate Short ID
+            const shortID = shortid();
+
+
+            //Store in the database
+            const result = await URL.create({
+                shortId: shortID,
+                redirectURL: url,
+                visitHistory: [],
+                createdBy: req.user._id,
+            })
+
+
+            //Final
+            success = true;
+            // return res.render("home", {
+            //     id: shortID
+            // })
+            return res.redirect("/");
+
         }
 
-
-        //Generate Short ID
-        const shortID = shortid();
-
-
-        //Store in the database
-        const result = await URL.create({
-            shortId: shortID,
-            redirectURL: url,
-            visitHistory: [],
-            createdBy: req.user._id,
-        })
-
-
-        //Final
-        success = true;
-        // return res.render("home", {
-        //     id: shortID
-        // })
-        return res.redirect("/");
+        else {
+            return res.redirect("/login")
+        }
 
 
     } catch (error) {

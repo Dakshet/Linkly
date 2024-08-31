@@ -15,12 +15,7 @@
                     <h2>Linkly</h2>
                 </div>
             </a>
-            <div class="navbarButtons">
-                <% if (locals.imageUrl) { %>
-                    <img src=<%=locals.imageUrl %> alt="">
-                    <% } %>
-                        <a href="/logout">Logout</a>
-            </div>
+
         </div>
         <div class="inputLinksBox">
             <div class="inputLinkBoxInner">
@@ -48,59 +43,7 @@
             </svg>
         </div>
     </div>
-    <div class="allHistoryBackground">
-        <div class="allHistoryTable">
-            <div class="allHistoryTableHeading">
-                <h3>History (<%= locals.urls.length %>)</h3>
-            </div>
 
-            <% if (locals.urls.length !==0) { %>
-
-                <!-- <div class="allHistoryTableContent"> -->
-
-                <table class="allHistoryTableHeadingContent">
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>ShortID</th>
-                            <th>Original Link</th>
-                            <th>Clicks</th>
-                            <th>QR Code</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% urls.forEach((url, index)=> { %>
-                            <tr>
-                                <td>
-                                    <%= locals.urls.length-index %>
-                                </td>
-                                <td>
-                                    <a target="_blank" href="/url/<%= url.shortId %>">
-                                        <%= url.shortId %>
-                                    </a>
-
-                                </td>
-                                <td>
-                                    <%= url.redirectURL %>
-                                </td>
-                                <td>
-                                    <%= url.visitHistory.length %>
-                                </td>
-                                <td>
-                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= BASE_URL%>/url/<%=url.shortId %> "
-                                        alt="">
-                                </td>
-                            </tr>
-                            <% }) %>
-                    </tbody>
-                </table>
-                <!-- </div> -->
-                <% } else { %>
-                    <h5>No Data to Display!</h5>
-                    <% } %>
-
-        </div>
-    </div>
 
     <footer>
         <p>Copyright &copy;2024 <span>Linkly.com</span></p>
