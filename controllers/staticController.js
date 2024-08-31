@@ -6,19 +6,18 @@ async function getHomePage(req, res) {
         // console.log(localStorage.getItem("token"))
 
 
-        // if (req.user) {
-        //     const allUrls = await URL.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
-        //     // console.log("log", req.user);
-        //     return res.render("home", {
-        //         urls: allUrls,
-        //         BASE_URL: process.env.BASE_URL,
-        //         imageUrl: req.user.profileImageURL
-        //     });
-        // }
-        // else {
-        //     return res.redirect("/login")
-        // }
-        return res.render("home")
+        if (req.user) {
+            const allUrls = await URL.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
+
+            return res.render("home", {
+                urls: allUrls,
+                BASE_URL: process.env.BASE_URL,
+                imageUrl: req.user.profileImageURL
+            });
+        }
+        else {
+            return res.render("home")
+        }
 
     } catch (error) {
         console.log(error.message);
