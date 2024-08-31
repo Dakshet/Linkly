@@ -4,13 +4,14 @@ function openUserMenu() {
     profileMenu.classList.toggle("open-menu")
 }
 
-gsap.from(".navbar", {
-    y: -10,
-    opacity: 0,
-    delay: 0,
-    duration: 0.8,
-    stagger: 0.4
-})
+// We are hide this because cursor:pointer are not working on the navbar.
+// gsap.from(".navbar", {
+//     y: -10,
+//     opacity: 0,
+//     delay: 0,
+//     duration: 0.8,
+//     stagger: 0.4
+// })
 
 gsap.from(".inputLinksBox", {
     y: 80,

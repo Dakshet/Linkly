@@ -35,12 +35,7 @@ async function handleGenerateShortURL(req, res) {
 
             //Final
             success = true;
-            return res.render("home", {
-                id: shortID,
-                BASE_URL: process.env.BASE_URL,
-                // imageUrl: "../images/1723462334141-ai-generated-8083323_640.jpg",
-                imageUrl: `.${req.user.profileImageURL}`,
-            })
+            return res.redirect("/")
             // return res.render("home", {
             //     BASE_URL: process.env.BASE_URL,
             //     imageUrl: req.user.profileImageURL
