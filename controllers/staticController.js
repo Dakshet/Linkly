@@ -38,8 +38,6 @@ async function getLoginPage(req, res) {
 async function getSignupPage(req, res) {
     try {
 
-
-
         return res.render("signup");
 
     } catch (error) {
