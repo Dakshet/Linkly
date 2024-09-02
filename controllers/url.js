@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator");
 const URL = require("../models/url.js")
 const shortid = require("shortid");
 let success = false;
+var shortID;
 
 async function handleGenerateShortURL(req, res) {
     try {
@@ -21,9 +22,9 @@ async function handleGenerateShortURL(req, res) {
 
 
             //Generate Short ID
-            const shortID = shortid();
+            shortID = shortid();
 
-
+            // await URL.deleteMany();
             //Store in the database
             const result = await URL.create({
                 shortId: shortID,
@@ -35,21 +36,16 @@ async function handleGenerateShortURL(req, res) {
 
             //Final
             success = true;
-            // return res.redirect("/")
-            // return res.render("home", {
-            //     BASE_URL: process.env.BASE_URL,
-            //     imageUrl: req.user.profileImageURL
-            // });
             const allUrls = await URL.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
-            return res.render("home", {
-                urls: allUrls,
-                BASE_URL: process.env.BASE_URL,
-                user: req.user,
-                image: `.${req.user.profileImageURL}`,
-                shortId: shortID,
-            });
+            // return res.render("home", {
+            //     urls: allUrls,
+            //     BASE_URL: process.env.BASE_URL,
+            //     user: req.user,
+            //     image: `.${req.user.profileImageURL}`,
+            //     shortId: shortID,
+            // });
 
-
+            return res.redirect("/")
         }
 
         else {
@@ -63,6 +59,12 @@ async function handleGenerateShortURL(req, res) {
         return res.status(500).json({ success, Error: "Internal Server Error Occured!" })
     }
 }
+
+
+function getShortIDValue() {
+    return shortID;
+}
+
 
 
 async function redirectURLUsingShortId(req, res) {
@@ -129,4 +131,5 @@ module.exports = {
     handleGenerateShortURL,
     redirectURLUsingShortId,
     getAnalytics,
+    getShortIDValue,
 }

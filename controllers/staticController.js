@@ -1,10 +1,8 @@
 const URL = require("../models/url");
+const { getShortIDValue } = require("./url");
 
 async function getHomePage(req, res) {
     try {
-
-        // console.log(localStorage.getItem("token"))
-
 
         if (req.user) {
             const allUrls = await URL.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
@@ -14,6 +12,7 @@ async function getHomePage(req, res) {
                 BASE_URL: process.env.BASE_URL,
                 user: req.user,
                 image: req.user.profileImageURL,
+                shortId: getShortIDValue(),
             });
         }
         else {
