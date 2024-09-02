@@ -504,6 +504,203 @@ a {
     }
 }
 
+
+/* ----------------------------- Testimonials */
+
+.feedback {
+    /* background-color: red; */
+    background-color: white;
+    color: black;
+    padding: 20px 50px 80px;
+}
+
+.feedbackInner {
+    margin: 40px auto 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    /* background-color: rebeccapurple; */
+}
+
+.feedbackInner h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.feedbackInner .feedbackInnerPara {
+    color: rgb(103, 101, 101);
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.feedbackBlocks {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.feedbackBlockFirst {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.feedBackBox {
+    height: 250px;
+    border-radius: 30px;
+    padding: 1vw 20px 2vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    position: relative;
+    /* background-color: rebeccapurple; */
+}
+
+.feedBackBoxPara {
+    /* background-color: red; */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.feedBackBoxBottom {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    /* background-color: red; */
+}
+
+.feedBackBox hr {
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+.feedBackBoxBottom div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.feedBackBox .circle {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(90deg, #EB568E, #144EE3);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+
+.feedbackBlockSecond {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(224, 171, 171); */
+    height: 350px;
+    margin-top: 30px;
+}
+
+.feedbackBlockSecond .feedBackBox {
+    height: 321px;
+    border-radius: 30px;
+    padding: 1vw 20px 2vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    position: relative;
+}
+
+.feedBackBoxx {
+    height: 150px;
+    width: 39vw;
+    border-radius: 30px;
+    padding: 1vw 20px 2vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    margin: 20px 10px;
+    position: relative;
+}
+
+.feedbackBlockSecond .feedBackBoxPara {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedBackBoxParax {
+    /* background-color: red; */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedbackBlockSecond .feedBackBox hr {
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+.feedBackBoxx hr {
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+.feedbackBlockSecond .feedBackBoxBottom div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.feedBackBoxBottom div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+
+.feedbackBlockSecond .feedBackBox .circle {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(90deg, #EB568E, #144EE3);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.feedBackBoxx .circle {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(90deg, #EB568E, #144EE3);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+
+
+
+/* --------------------------------------- footer */
 footer {
     height: 50px;
     display: flex;
@@ -527,7 +724,8 @@ footer p span {
 /* ------------------- MEDIA QUERIES */
 
 
-@media (max-width:1000px) {
+
+@media (max-width:1050px) {
 
     .colorfullHeading h1 {
         font-size: 4.5vw;
@@ -566,6 +764,87 @@ footer p span {
     .toast {
         width: 300px;
     }
+
+
+    .feedback {
+        padding: 20px 10px 80px;
+    }
+
+    .feedBackBox {
+        height: 380px;
+        margin: 5px;
+        border-radius: 30px;
+        padding: 1vw 10px 2vw;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+        position: relative;
+        /* background-color: rebeccapurple; */
+    }
+
+    .feedBackBoxPara {
+        /* background-color: red; */
+        height: 290px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feedBackBoxBottom {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+    }
+
+    .feedBackBoxBottom div {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .feedbackBlockSecond {
+        height: 390px;
+    }
+
+    .feedbackBlockSecond .feedBackBox {
+        height: 380px;
+        margin: 5px;
+        border-radius: 30px;
+        padding: 1vw 10px 2vw;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+        position: relative;
+        /* background-color: rebeccapurple; */
+    }
+
+    .feedBackBoxx {
+        height: 180px;
+        width: 30vw;
+    }
+
+    .feedbackBlockSecond .feedBackBoxPara {
+        /* background-color: red; */
+        height: 290px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feedBackBoxBottom {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+    }
+
+    .feedBackBoxBottom div {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+
+
 }
 
 
@@ -694,12 +973,61 @@ footer p span {
 
 
     footer p {
-        font-size: 2.5vw;
+        font-size: 2.8vw;
     }
 
     .allHistoryTable h5 {
         padding: 50px 0px 50px 20vw;
         font-size: 5vw;
+    }
+
+    .feedbackBlocks {
+        padding: 0px 0px;
+    }
+
+    .feedbackBlockFirst {
+        flex-direction: column;
+        margin-left: -20px;
+    }
+
+    .feedBackBox {
+        width: 90%;
+        margin: 15px 0;
+        height: 320px;
+    }
+
+    .feedBackBoxPara {
+        height: 240px;
+    }
+
+    .feedbackBlockSecond {
+        flex-direction: column;
+        margin-left: -20px;
+        margin-top: 0px;
+    }
+
+    .feedbackBlockSecond .feedBackBox {
+        width: 90%;
+        margin: 15px 0;
+        height: 320px;
+    }
+
+    .feedBackBoxx {
+        width: 90%;
+        margin: 15px auto;
+        height: 180px;
+    }
+
+    .feedBackBoxx:last-child {
+        margin-top: 30px;
+    }
+
+    .feedbackBlockColumn {
+        width: 100%;
+    }
+
+    .feedback {
+        min-height: 2500px;
     }
 
 }

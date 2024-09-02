@@ -63,7 +63,7 @@ async function getDeleteId(req, res) {
 
         const json = await response.json();
 
-        console.log("final", json);
+        // console.log("final", json);
 
         return res.redirect("/")
 

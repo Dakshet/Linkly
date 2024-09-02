@@ -132,11 +132,137 @@
 
             </div>
         </div>
-
         <% } %>
-            <footer>
-                <p>Copyright &copy;2024 <span>Linkly.com</span></p>
-            </footer>
+
+            <% if (!locals.user) { %>
+
+
+                <div class="feedback">
+                    <div class="feedbackInner">
+                        <h2>What people say about Linkly</h2>
+                        <p class="feedbackInnerPara">You’re in good company. Thousands of businesses use Linkly to
+                            create
+                            tracking links, retarget
+                            visitors, make QR codes and more.</p>
+                        <div class="feedbackBlocks">
+                            <div class="feedbackBlockFirst">
+                                <div class="feedBackBox">
+                                    <div class="feedBackBoxPara">
+                                        <p>“Very nice product, was our favorite among several we tried. The
+                                            developer/owner
+                                            of
+                                            Linkly is very responsive and developed helpful features quickly,
+                                            following our
+                                            request.
+                                            Very cool.”</p>
+                                    </div>
+                                    <div class="feedBackBoxBottom">
+                                        <hr>
+                                        <div>
+                                            <div class="circle"></div>
+                                            <h4>Alon D.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedBackBox">
+                                    <div class="feedBackBoxPara">
+                                        <p>“We were looking for a tool that allowed us to track link clicks from
+                                            across many
+                                            different sources to a 3rd party site we didn’t have access to and pixel
+                                            all of
+                                            them
+                                            centrally. Linkly is a clean, easy way of doing that quickly and
+                                            cheaply.”</p>
+                                    </div>
+                                    <div class="feedBackBoxBottom">
+                                        <hr>
+                                        <div>
+                                            <div class="circle"></div>
+                                            <h4>ROBERT W.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedBackBox">
+                                    <div class="feedBackBoxPara">
+                                        <p>“Easily create shortened URLs which showcase your branding.”</p>
+                                    </div>
+                                    <div class="feedBackBoxBottom">
+                                        <hr>
+                                        <div>
+                                            <div class="circle"></div>
+                                            <h4>JAMIE P.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedbackBlockSecond">
+                                <div class="feedbackBlockColumn">
+                                    <div class="feedBackBoxx">
+                                        <div class="feedBackBoxParax">
+                                            <p>“Very easy to use - great customer help - clear data”</p>
+                                        </div>
+                                        <div class="feedBackBoxBottom">
+                                            <hr>
+                                            <div>
+                                                <div class="circle"></div>
+                                                <h4>ALEKSANDRA R.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feedBackBoxx">
+                                        <div class="feedBackBoxParax">
+                                            <p>“Good features, relatively easy to use and got great results”</p>
+                                        </div>
+                                        <div class="feedBackBoxBottom">
+                                            <hr>
+                                            <div>
+                                                <div class="circle"></div>
+                                                <h4>NIALL H.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedBackBox">
+                                    <div class="feedBackBoxPara">
+                                        <p>“Love the geo targeting feature whereby it auto detects user’s location
+                                            and
+                                            redirects
+                                            to appropriate local URL, also happy with the mailto link shortening
+                                            which isn’t
+                                            offered by most link shorteners.”</p>
+                                    </div>
+                                    <div class="feedBackBoxBottom">
+                                        <hr>
+                                        <div>
+                                            <div class="circle"></div>
+                                            <h4>SAGAR J.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedBackBox">
+                                    <div class="feedBackBoxPara">
+                                        <p>“This software it remarkably easy to use and would be a great choice for
+                                            any
+                                            marketer
+                                            who wants to be able to track link metrics without losing brand
+                                            integrity.”</p>
+                                    </div>
+                                    <div class="feedBackBoxBottom">
+                                        <hr>
+                                        <div>
+                                            <div class="circle"></div>
+                                            <h4>Shanda E.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                    <footer>
+                        <p>Copyright &copy;2024 <span>Linkly.com</span></p>
+                    </footer>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
