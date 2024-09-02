@@ -301,10 +301,10 @@ a {
 .allHistoryTable {
     background-color: #0B101B;
     padding: 2% 5% 2%;
-    max-width: 970px;
+    max-width: 1160px;
     margin: auto;
     border-radius: 30px;
-    max-height: 730px;
+    max-height: 710px;
     color: white;
 }
 
@@ -323,7 +323,7 @@ a {
 .allHistoryTableHeadingContent {
     margin-top: 30px;
     overflow-y: scroll;
-    max-height: 593px;
+    max-height: 575px;
     display: block;
 }
 
@@ -348,11 +348,11 @@ a {
     margin: auto;
 }
 
-.allHistoryTableHeadingContent tbody tr td a {
+/* .allHistoryTableHeadingContent tbody tr td a {
     color: white;
     cursor: pointer;
     text-decoration: none;
-}
+} */
 
 .allHistoryTableHeadingContent tbody tr td a {
     cursor: pointer;

@@ -126,10 +126,33 @@ async function getAnalytics(req, res) {
 }
 
 
+async function deleteShortId(req, res) {
+    try {
+
+        //Destructure the request
+        const Id = req.params.id;
+
+        const result = await URL.findByIdAndDelete(Id);
+
+
+        success = true;
+        return res.status(200).json({ success, result })
+
+
+
+    } catch (error) {
+        console.log(error.message);
+        success = false;
+        return res.status(500).json({ success, Error: "Internal Server Error Occured!" })
+    }
+}
+
+
 
 module.exports = {
     handleGenerateShortURL,
     redirectURLUsingShortId,
     getAnalytics,
     getShortIDValue,
+    deleteShortId,
 }

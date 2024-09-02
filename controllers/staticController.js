@@ -1,11 +1,15 @@
 const URL = require("../models/url");
 const { getShortIDValue } = require("./url");
+const BASE_URL = process.env.BASE_URL;
 
 async function getHomePage(req, res) {
     try {
 
         if (req.user) {
             const allUrls = await URL.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
+
+            // console.log(allUrls);
+
 
             return res.render("home", {
                 urls: allUrls,
@@ -45,9 +49,35 @@ async function getSignupPage(req, res) {
     }
 }
 
+async function getDeleteId(req, res) {
+    try {
+
+        // console.log("deleteid", req.params.id);
+
+        const response = await fetch(`${BASE_URL}/url/deletelink/${req.params.id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        const json = await response.json();
+
+        console.log("final", json);
+
+        return res.redirect("/")
+
+
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 
 module.exports = {
     getHomePage,
     getLoginPage,
     getSignupPage,
+    getDeleteId
 }

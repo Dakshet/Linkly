@@ -1,5 +1,5 @@
 const express = require("express");
-const { getHomePage, getLoginPage, getSignupPage } = require("../controllers/staticController");
+const { getHomePage, getLoginPage, getSignupPage, getDeleteId } = require("../controllers/staticController");
 
 const router = express.Router();
 
@@ -9,6 +9,8 @@ router.get("/signup", getSignupPage)
 router.get("/logout", (req, res) => {
     res.clearCookie("token").redirect("/");
 })
+
+router.get("/deleteid/:id", getDeleteId);
 
 
 module.exports = router;

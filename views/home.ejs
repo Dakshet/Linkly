@@ -94,6 +94,7 @@
                                 <th>Original Link</th>
                                 <th>Clicks</th>
                                 <th>QR Code</th>
+                                <th>Delete Link</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -116,6 +117,9 @@
                                     <td>
                                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= BASE_URL%>/url/<%=url.shortId %> "
                                             alt="">
+                                    </td>
+                                    <td>
+                                        <a href="/deleteid/<%= url._id %>"><i class="ri-delete-bin-6-line"></i></a>
                                     </td>
                                 </tr>
                                 <% }) %>
