@@ -994,10 +994,12 @@ footer p span {
         width: 90%;
         margin: 15px 0;
         height: 320px;
+        /* height: auto; */
     }
 
     .feedBackBoxPara {
         height: 240px;
+        /* height: auto; */
     }
 
     .feedbackBlockSecond {
@@ -1028,6 +1030,10 @@ footer p span {
 
     .feedback {
         min-height: 2500px;
+    }
+
+    .dNone {
+        display: none;
     }
 
 }
